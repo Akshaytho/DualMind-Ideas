@@ -15,9 +15,31 @@
 - Regulation conflict detector (RuleLint — prototyping)
 - Informal income proof engine (proposed but not validated)
 - Price discrimination exposer (proposed but not validated)
+- RERA construction verification (Aeroyantra, RERA 2.0)
+- Government scheme eligibility (myScheme.gov.in)
+- Compliance monitoring (TeamLease RegTech, Lawrbit)
+- Court case prediction (Pre/Dicta, Manupatra, Kanoon.ai)
+- Address verification API (Google Maps, GeoIQ, Mappls)
+- UPI merchant disputes (NPCI UDIR)
+- Environmental compliance (GeoAI/UNDP, Blue Sky Analytics)
+- D2C delivery fraud (Shipfast, Pragma, CODShield AI)
+- Apartment snag list (SnagEasy India)
+- B2B credit scoring GST (Lendingkart, Perfios, OCEN)
+- Tender bid optimizer (Minaions)
+- GST audit risk scorer (C-Score, ProAnalyser, GSTHero)
+- Housing society accounting (MyGate 27K+, ApnaComplex)
+- BIS certificate verification (BIS CARE app)
+- Commercial rent benchmark (CRE Matrix + IIMB)
+- DPDPA compliance (OneTrust, Leegality)
+- MSME payment delay (MSME SAMADHAAN)
+- ONDC seller analytics (SellerApp, CostBo)
+- Subcontractor escrow (Castler)
+- Worker attendance verification (Truein)
 
 ## Ideas Under Discussion
-_None yet._
+- **BuilderCheck** — RERA Builder Trust Score for homebuyers (B2C). ReraDesk is B2B only.
+- **PayPulse** — Recurring Payment Pre-Failure Intelligence API. No standalone predictor exists.
+- **VendorLens** — Housing Society Vendor Price Intelligence. Zero cross-society benchmarking exists.
 
 ## Criteria Checklist
 - [ ] Nobody has built it (web search verified)
