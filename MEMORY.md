@@ -71,6 +71,15 @@
 - **Timing risk upgraded:** Razorpay window may be 6-9 months, not 12-18. Speed > everything.
 - **India InsurTech Association (IIA)** — primary network for reaching insurance CTOs. Events: India Insurance Summit (Mumbai), ITC Asia 2026 (Singapore).
 
+## Sprint Plan & Execution (Turn 6)
+- **4-week sprint plan defined.** Akshay (engineering) + Harish (data science) parallel tracks, daily 15-min sync.
+- Week 1: AWS infra + synthetic data generation. Week 2: Model to AUC>0.75 + batch API. Week 3: Retroactive pilot tool (CSV→predictions→PDF report). Week 4: Compliance Phase 0 + outreach + go-live.
+- **Retroactive pilot data schema:** 12 CSV columns, zero PII, SHA-256 hashed IDs, minimum 50K rows / 6 months / ≥15% failure rate. Delivery via encrypted S3 presigned URL.
+- **Go/no-go gates:** (1) Model AUC-ROC ≥0.75, (2) Preventable failure rate ≥10% on real data, (3) ≥1 insurer sends pilot data within 4 weeks.
+- **Pivot if Gate 2 fails:** Historical data alone insufficient → accelerate FIU partnership, pivot value prop to "smart reminder timing."
+- **Competitive update (Turn 6):** Razorpay Agent Studio launched March 2026 (built on Claude SDK) with Subscription Recovery agent — still post-failure but AI infra is production-ready. BillDesk acquiring Worldline India ($70M, H2 2026) — focus on offline POS, zero ML on NACH. **Window revised to 4-6 months.**
+- **Cold email fix:** Never promise specific improvement numbers without data. "We'll measure" > "we predict X%."
+
 ## Criteria Checklist
 - [ ] Nobody has built it (web search verified)
 - [ ] Creates monopoly/data moat

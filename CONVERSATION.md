@@ -426,3 +426,106 @@ Razorpay's Sprint 2026 cash position prediction uses the SAME ML infra that woul
 3. **Go/no-go criteria.** What metric says "this works" vs "pivot"? AUC-ROC > 0.75? Prevented failures > 15%? Define the bar.
 
 ---
+
+## Turn 6 — Mind B (Arjun) — 2026-04-05
+
+**Phase:** PLANNING
+**Pushback:** Kiran, your cold email promises "15-20% preventable failures" — we have ZERO data to back that. Promising a number before building the model is how startups destroy credibility on first contact. The email must say "we'll measure your preventable failure rate" not claim a figure. Also: Razorpay launched Agent Studio (March 2026, built on Claude SDK) with a Subscription Recovery agent. Still post-failure, but they're investing heavily in AI-native payment ops. The window just got shorter.
+
+### Competitive Update: Razorpay Agent Studio (March 2026)
+
+Razorpay shipped **Agent Studio** — a B2B agent marketplace built on Anthropic's Claude SDK. Includes a **Subscription Recovery agent** that "analyzes failed subscription payments, applies smarter retry logic, and triggers targeted customer nudges via WhatsApp." Still post-failure recovery. But the infra is there — they're one sprint away from pre-debit prediction.
+
+**BillDesk:** Acquiring Worldline India for $70M (closing H2 2026). Focus is offline POS expansion, NOT ML on NACH. Confirmed: zero intelligence layer on NACH batch processing. Our wedge holds.
+
+**Revised window estimate: 4-6 months**, not 6-9. Razorpay's AI infra is production-ready.
+
+### Answer 1: Week-by-Week Sprint Plan (4 Weeks)
+
+Two parallel tracks. Akshay = engineering. Harish = data science. They sync daily, 15 min.
+
+**WEEK 1 — Foundation**
+| Track | Akshay | Harish |
+|-------|--------|--------|
+| Mon-Tue | AWS Mumbai: VPC, RDS Postgres, S3, KMS. FastAPI skeleton with `/predict`, `/predict/batch`, `/webhook/outcome` | Define synthetic schema: 100K customers × 24mo. Research eNACH failure distributions from NPCI reports |
+| Wed-Thu | Auth (API key + HMAC), rate limiting, audit logging, basic VAPT | Generate synthetic dataset v1. Failure modes: salary-cycle (25%), month-end (40%), seasonal, consecutive chains |
+| Fri | Integration: Harish's feature pipeline → API. E2E test with synthetic data | Train XGBoost v1. Baseline AUC-ROC target: >0.70 |
+
+**WEEK 2 — Model + API Polish**
+| Track | Akshay | Harish |
+|-------|--------|--------|
+| Mon-Tue | Batch endpoint (50K mandates <30s). Webhook ingestion for outcomes | Features: payment_streak, days_since_failure, amount_vs_median, day_of_week. Target AUC-ROC >0.75 |
+| Wed-Thu | Admin dashboard: CSV upload → retroactive predictions. THIS is the pilot tool | SHAP explanations per prediction. Model interpretability is non-negotiable for enterprise |
+| Fri | Load testing. Security review. Swagger docs | Model serialization + versioning. A/B framework stub |
+
+**WEEK 3 — Retroactive Pilot Tool**
+| Track | Akshay | Harish |
+|-------|--------|--------|
+| Mon-Tue | CSV ingestion pipeline → predictions → report generator | Calibration tuning (reliability diagram). Miscalibrated model = death |
+| Wed-Thu | Pilot report: PDF showing "of X failures, predicted Y, Z preventable via timing" | Retrain on proxy datasets. Document methodology (1-pager for CTOs) |
+| Fri | Full pipeline dry run with synthetic insurer data | Model card: accuracy, limitations, data requirements |
+
+**WEEK 4 — Outreach + Compliance**
+| Track | Akshay | Harish |
+|-------|--------|--------|
+| Mon-Tue | Phase 0 compliance: InfoSec policy, privacy policy, NDA, vendor questionnaire. DPDPA consent | Data anonymization specs. V2 model planning |
+| Wed-Thu | Landing page (paypulse.in). 60s demo video. Cold outreach (revised email below) | Support outreach with technical specs |
+| Fri | **GO-LIVE**: API live, pilot tool live, outreach sent, IIA registration | Go/no-go checkpoint |
+
+### Answer 2: Retroactive Pilot Data Schema
+
+**CSV columns (12 fields, zero PII):**
+```
+mandate_id          — SHA-256 hash (insurer holds salt)
+customer_id         — SHA-256 hash
+mandate_amount      — INR (round to ₹500 if insurer prefers)
+payment_method      — enach|upi_autopay|card_si
+scheduled_date      — YYYY-MM-DD (exact — temporal patterns are core signal)
+actual_debit_date   — YYYY-MM-DD (null if not attempted)
+outcome             — success|failed|partial|cancelled
+failure_reason      — insufficient_funds|mandate_revoked|technical|bank_declined|other
+attempt_number      — 1|2|3
+policy_type         — health|life|motor|other (optional)
+mandate_start_date  — YYYY-MM-DD (tenure signal)
+premium_frequency   — monthly|quarterly|annual
+```
+
+**Minimum viable dataset:** 50K rows (10K customers × 5 months), ≥15% failure rate, ≥6 months span. Ideal: 200K+ rows, 12+ months.
+
+**Delivery:** Encrypted S3 presigned URL (24hr expiry). No email. No Google Drive.
+
+### Answer 3: Go/No-Go Criteria (3 Gates)
+
+**Gate 1 — Model (Week 2):** AUC-ROC ≥0.75 (NO-GO <0.65). Precision@50% recall ≥0.60. Calibration error <0.10.
+
+**Gate 2 — Retroactive Pilot (Week 3-4, on real data):** Preventable failure rate ≥10% of total (NO-GO <5%). True positive rate ≥60%. False positive rate <30%. "Preventable" = correctly predicted failure where customer paid within 7 days on retry.
+
+**Gate 3 — Market (Week 4):** ≥1 insurer sends pilot data (NO-GO: zero data after 20+ attempts). ≥1 CTO meeting scheduled.
+
+**Pivot options:** Gate 1 fail → extend 2 weeks. Gate 2 fail → historical data insufficient, accelerate FIU partnership, pivot to "smart reminder timing." Gate 3 fail → try BillDesk/PayU channel partnership instead of direct sales.
+
+### Revised Cold Email
+
+> **Subject:** `[Digit] Your eNACH failure rate — we'll measure what's preventable`
+>
+> Hi Atul,
+>
+> eNACH first-attempt failures cost insurers 15-25% of collections monthly. Most are timing problems — the customer pays 5 days later.
+>
+> We built PayPulse — a prediction API that scores mandate failure probability BEFORE batch submission.
+>
+> **Zero-risk offer:** Send us 6 months of anonymized mandate data (12 columns, no PII). We run retroactive predictions and report: how many failures were predictable, how many preventable via timing. If numbers aren't meaningful, we delete everything.
+>
+> 15 minutes to walk through the data spec?
+>
+> — Akshay
+
+**What changed:** No made-up percentages. "We'll measure" beats "we predict 15-20%."
+
+### What I Need From Kiran (Turn 7)
+
+1. **Channel strategy.** Should Akshay approach BillDesk/PayU as a TECHNOLOGY PARTNER (white-label PayPulse to NACH merchants)? Could be 100x faster than enterprise sales.
+2. **Moat after Razorpay ships.** If they launch pre-debit prediction Q3 2026, what does PayPulse have? "First" isn't a moat.
+3. **Harish's commitment level.** Sprint assumes 40hr/week from both. Is Harish full-time or nights-and-weekends?
+
+---
