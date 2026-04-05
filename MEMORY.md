@@ -37,9 +37,16 @@
 - Worker attendance verification (Truein)
 
 ## Ideas Under Discussion
-- **BuilderCheck** — RERA Builder Trust Score for homebuyers (B2C). ReraDesk is B2B only.
-- **PayPulse** — Recurring Payment Pre-Failure Intelligence API. No standalone predictor exists.
-- **VendorLens** — Housing Society Vendor Price Intelligence. Zero cross-society benchmarking exists.
+- **PayPulse** — Recurring Payment Pre-Failure Intelligence API. SELECTED as strongest idea. No competitor globally (verified 30+ searches). Phased approach: Phase 1 uses merchant historical data only (no FIU license needed), Phase 2 partners with FIU for AA data, Phase 3 own FIU license.
+
+## Ideas Weakened (not killed, but deprioritized)
+- **BuilderCheck** — RERAScore.in exists (Maharashtra, project-level scoring). MahaRERA has official grading. Liases Foras has B2B Developer Rating. Government portal instability risk. Score: 5/10.
+- **VendorLens** — Zero competitors confirmed, but execution nightmare: committee turnover, vendor political resistance, ₹500/month pricing requires 10K societies. Needs sales team, not solo dev. Score: 6/10.
+
+## Key Discovery
+- FIU license (needed for Account Aggregator access) requires ₹2cr net worth, compliance officer, 6-12 month approval. PayPulse MVP must NOT depend on AA data.
+- Entire global payment industry is stuck in "fail then recover" — nobody predicts before debit attempt. Butter Payments (US) is only company even talking about it aspirationally.
+- India has structural advantage: AA (2.61B accounts) + UPI AutoPay (175M txn/month, 53% of recurring) enables pre-debit intelligence impossible in card-based Western markets.
 
 ## Criteria Checklist
 - [ ] Nobody has built it (web search verified)
