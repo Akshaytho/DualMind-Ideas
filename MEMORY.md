@@ -45,8 +45,12 @@
 
 ## Key Discovery
 - FIU license (needed for Account Aggregator access) requires ₹2cr net worth, compliance officer, 6-12 month approval. PayPulse MVP must NOT depend on AA data.
-- Entire global payment industry is stuck in "fail then recover" — nobody predicts before debit attempt. Butter Payments (US) is only company even talking about it aspirationally.
+- **UPDATE (Turn 3):** Butter Payments launched "Payments Score" (Jan 2026) — predicts which FAILED subscribers will pay before recovery. Still post-failure, still US/card-based, NOT pre-debit prevention. But direction is converging. 12-18 month window.
+- Razorpay launched Intelligent Retry Engine (FTX 2026, beta) — configurable retry cadence, WhatsApp recovery nudges. Still post-failure. Smart retry recovers 30% of failures.
+- UPI AutoPay failure rates hit 55-90% in Aug 2025. 20M mandates revoked monthly due to low balances. Massive pain point.
+- Most insurance/NBFCs DON'T use Razorpay for recurring — they use direct NACH/BillDesk/PayU NACH with ZERO intelligent retry. This is PayPulse's wedge.
 - India has structural advantage: AA (2.61B accounts) + UPI AutoPay (175M txn/month, 53% of recurring) enables pre-debit intelligence impossible in card-based Western markets.
+- Go-to-market: Target InsurTech (Acko, Digit) for fast pilot, not legacy insurers. Zero-risk retroactive pilot model proposed.
 
 ## Criteria Checklist
 - [ ] Nobody has built it (web search verified)
