@@ -103,3 +103,21 @@
 - VendorLens KILLED: needs sales team
 - NEW RULES: zero sales (organic only), no licenses, solo-buildable, revenue from day 1
 - Think: developer tools, creator tools, prosumer tools — things that spread by USAGE not SELLING
+
+## Round 2 — Ideas KILLED (Turn 1)
+- Bank statement to Tally (Nikash, LedgerConnect, PDF2TallyFlow)
+- UPI payment link analytics (UPI Intent, NPCI trackers)
+- Indian KYC sandbox (Sandbox.co.in, Perfios, IDfy, SurePass)
+- Compliance calendar SaaS (Finace India, EZTax, GimBooks)
+- Photo verification API (Truepic, Certi.photo, C2PA standard)
+- Indian address parser API (SurePass, PostGrid, Libpostal)
+- HSN/SAC code finder (ClearTax, GST portal AI, 5+ tools)
+- Business name availability checker (Razorpay RIZE, Vakilsearch)
+- UPI donation widget (Pay Via UPI, Donate Via UPI)
+- Indian data validator library (format-utils, validate-india npm)
+- India Stack API health monitor (DownRightNow.in exists)
+
+## Round 2 — Ideas Under Discussion (Turn 1)
+- **DPDPALint** — DPDPA code compliance scanner for developers. CLI + GitHub Action. No direct competitor (OneTrust/Seqrite are enterprise compliance platforms, not code scanners). DPDPA enforced March 2026, ₹250cr penalties. STRONGEST candidate.
+- **PayBench** — Crowdsourced cross-gateway payment success rate benchmark. No independent tool exists. Network effect moat. Risks: cold start, low willingness to pay, gateway pushback.
+- **RegFeed India** — Structured API for RBI/SEBI/IRDAI changes. No competitor. Risk: needs enterprise sales (violates constraint #1).

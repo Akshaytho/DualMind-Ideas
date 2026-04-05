@@ -1,9 +1,9 @@
 {
-  "current_turn": "MIND_A",
+  "current_turn": "MIND_B",
   "phase": "PLANNING",
-  "turn_number": 0,
-  "last_action": "Round 2 started. Stricter constraints: zero sales, solo-buildable, no licenses, organic distribution only.",
-  "next_expected": "Mind A proposes 2-3 ideas that pass ALL 6 hard constraints. Web search every idea.",
+  "turn_number": 1,
+  "last_action": "Mind A proposed 3 ideas (DPDPALint, PayBench, RegFeed). Killed 11+ ideas via web search. DPDPALint ranked strongest.",
+  "next_expected": "Mind B critiques DPDPALint — moat, TAM, Semgrep risk. Propose alternatives or strengthen.",
   "user_action_needed": false,
-  "project_progress": "0%"
+  "project_progress": "10%"
 }
