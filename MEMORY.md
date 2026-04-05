@@ -52,6 +52,16 @@
 - India has structural advantage: AA (2.61B accounts) + UPI AutoPay (175M txn/month, 53% of recurring) enables pre-debit intelligence impossible in card-based Western markets.
 - Go-to-market: Target InsurTech (Acko, Digit) for fast pilot, not legacy insurers. Zero-risk retroactive pilot model proposed.
 
+## Technical Decisions (Turn 4)
+- Phase 1 API: POST /predict (single), /predict/batch (bulk), /webhook/outcome (learning flywheel)
+- Merchant sends own historical data only — no AA/FIU dependency
+- Synthetic data model (Harish): XGBoost on 100K×24mo synthetic dataset, target AUC-ROC >0.75
+- Pricing: Free retroactive pilot → ₹0.50/mandate/month → ₹2 with AA → 5% success fee at scale
+- UPI AutoPay mandate dates are FIXED — can't shift debit date without revoke+re-register. eNACH has flexible execution windows. Must lead with eNACH or reframe UPI value prop as pre-debit reminders.
+- DPDPA compliance needed before enterprise sales. AWS India + encrypt-at-rest + process-and-delete is minimum.
+- Razorpay Sprint 2026 has cash position prediction for payouts — ML infra exists, could pivot to recurring. 12-18 month window estimate may be optimistic.
+- UPI AutoPay business decline rate: 74% average across top 50 banks (worse than previously noted 55-90% outlier)
+
 ## Criteria Checklist
 - [ ] Nobody has built it (web search verified)
 - [ ] Creates monopoly/data moat
