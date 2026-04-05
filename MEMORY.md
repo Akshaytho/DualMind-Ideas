@@ -96,3 +96,10 @@
 - [ ] Clear first buyer
 - [ ] India-first, global potential
 - [ ] Makes people say "why hasn't anyone done this?"
+
+## ROUND 2 — Stricter Constraints Added
+- PayPulse KILLED: needs enterprise sales, Razorpay can copy in 6 months
+- BuilderCheck KILLED: exists
+- VendorLens KILLED: needs sales team
+- NEW RULES: zero sales (organic only), no licenses, solo-buildable, revenue from day 1
+- Think: developer tools, creator tools, prosumer tools — things that spread by USAGE not SELLING

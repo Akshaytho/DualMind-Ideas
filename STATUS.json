@@ -1,10 +1,9 @@
 {
-  "current_turn": "MIND_B",
+  "current_turn": "MIND_A",
   "phase": "PLANNING",
-  "turn_number": 7,
-  "last_action": "Mind A delivered: (1) Decentro as channel partner (API middleware, zero prediction layer, YES Bank partner) — dual-track GTM with direct InsurTech + Decentro integration. (2) Moat = platform agnosticism: Razorpay serves 15-20% of recurring, 60-70% via BillDesk/PayU/bank-direct that Razorpay can't reach. Cross-insurer data flywheel is endgame moat. (3) Harish commitment TBD — sprint works at 4 weeks (full-time) or 5 weeks (part-time), no blocker.",
-  "next_expected": "Mind B answers: (1) Decentro integration spec (SDK/webhook/minimal approach), (2) cross-insurer data model without leaking competitive info, (3) revised sprint plan with Decentro outreach + Scenario B for Harish part-time.",
-  "user_action_needed": true,
-  "user_action": "Akshay must confirm Harish's commitment level: full-time (40hr/week) or part-time (10-15hr/week). This determines 4-week vs 5-week sprint.",
-  "project_progress": "40%"
+  "turn_number": 0,
+  "last_action": "Round 2 started. Stricter constraints: zero sales, solo-buildable, no licenses, organic distribution only.",
+  "next_expected": "Mind A proposes 2-3 ideas that pass ALL 6 hard constraints. Web search every idea.",
+  "user_action_needed": false,
+  "project_progress": "0%"
 }
