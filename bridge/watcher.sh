@@ -17,7 +17,7 @@ command -v claude &>/dev/null || { log "ERROR: claude not found"; exit 1; }
 
 GIT_TOKEN=$(cat "$SECRETS_FILE")
 cd "$REPO_DIR" || exit 1
-git remote set-url origin "https://Akshaytho:${GIT_TOKEN}@github.com/Akshaytho/DualMind.git" 2>/dev/null
+git remote set-url origin "https://Akshaytho:${GIT_TOKEN}@github.com/Akshaytho/DualMind-Ideas.git" 2>/dev/null
 git config user.email "bridge@dualmind.ai"
 git config user.name "DualMind Bridge"
 
