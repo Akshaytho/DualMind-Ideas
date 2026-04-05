@@ -80,6 +80,15 @@
 - **Competitive update (Turn 6):** Razorpay Agent Studio launched March 2026 (built on Claude SDK) with Subscription Recovery agent — still post-failure but AI infra is production-ready. BillDesk acquiring Worldline India ($70M, H2 2026) — focus on offline POS, zero ML on NACH. **Window revised to 4-6 months.**
 - **Cold email fix:** Never promise specific improvement numbers without data. "We'll measure" > "we predict X%."
 
+## Channel & Competitive Intelligence (Turn 7)
+- **Decentro** (Bangalore, Series A) launched eNACH + UPI AutoPay APIs (Sept 2024, YES Bank partner). API middleware — zero prediction layer. Potential channel partner: PayPulse = their intelligence upgrade. CTO: Rohit Taneja.
+- **BillDesk + Worldline acquisition** ($70M, closing H2 2026) — integration-focused, zero ML appetite for 12-18 months. Worldline long-term tech pact for payment software.
+- **Razorpay Agent Studio** (March 2026): Subscription Recovery agent uses ElevenLabs voice + WhatsApp nudges. Still POST-failure. Cashflow Forecaster = payouts only. NO pre-debit prediction on eNACH.
+- **PayPulse moat = platform agnosticism.** Razorpay serves ~15-20% of recurring payments. 60-70% of eNACH volume is via BillDesk/PayU/bank-direct/Decentro — Razorpay structurally cannot reach them.
+- **Cross-insurer data moat:** After 3+ insurer pilots, cross-insurer failure patterns emerge that no single company or Razorpay can see. This is the endgame moat.
+- **Dual-track GTM:** (1) Direct to InsurTech (Digit, Acko), (2) Decentro channel partnership for NBFC/InsurTech reach.
+- **Harish commitment TBD.** Sprint is 4 weeks (full-time) or 5 weeks (part-time). API and model are independent tracks — no blocker either way.
+
 ## Criteria Checklist
 - [ ] Nobody has built it (web search verified)
 - [ ] Creates monopoly/data moat

@@ -1,9 +1,10 @@
 {
-  "current_turn": "MIND_A",
+  "current_turn": "MIND_B",
   "phase": "PLANNING",
-  "turn_number": 6,
-  "last_action": "Mind B delivered: 4-week sprint plan (Akshay eng + Harish DS parallel tracks), retroactive pilot data schema (12 CSV columns, zero PII, 50K min rows), 3-gate go/no-go criteria (model AUC≥0.75, preventable≥10%, ≥1 insurer sends data). Revised cold email removing unproven claims. Competitive update: Razorpay Agent Studio (March 2026) with Subscription Recovery agent — still post-failure but window shortened to 4-6 months.",
-  "next_expected": "Mind A answers: (1) BillDesk/PayU channel partnership vs direct sales, (2) competitive moat after Razorpay ships pre-debit, (3) Harish commitment level (full-time vs part-time impacts sprint plan).",
-  "user_action_needed": false,
-  "project_progress": "35%"
+  "turn_number": 7,
+  "last_action": "Mind A delivered: (1) Decentro as channel partner (API middleware, zero prediction layer, YES Bank partner) — dual-track GTM with direct InsurTech + Decentro integration. (2) Moat = platform agnosticism: Razorpay serves 15-20% of recurring, 60-70% via BillDesk/PayU/bank-direct that Razorpay can't reach. Cross-insurer data flywheel is endgame moat. (3) Harish commitment TBD — sprint works at 4 weeks (full-time) or 5 weeks (part-time), no blocker.",
+  "next_expected": "Mind B answers: (1) Decentro integration spec (SDK/webhook/minimal approach), (2) cross-insurer data model without leaking competitive info, (3) revised sprint plan with Decentro outreach + Scenario B for Harish part-time.",
+  "user_action_needed": true,
+  "user_action": "Akshay must confirm Harish's commitment level: full-time (40hr/week) or part-time (10-15hr/week). This determines 4-week vs 5-week sprint.",
+  "project_progress": "40%"
 }
