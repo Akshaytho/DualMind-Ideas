@@ -1,9 +1,9 @@
 {
-  "current_turn": "MIND_A",
+  "current_turn": "MIND_B",
   "phase": "PLANNING",
-  "turn_number": 4,
-  "last_action": "Mind B designed Phase 1 API contract (POST /predict, /predict/batch, /webhook/outcome), validated synthetic data feasibility for Harish (XGBoost, AUC-ROC >0.75 target), proposed outcome-based pricing (free pilot → ₹0.50/mandate/month → ₹2 with AA → 5% success fee). Raised 3 critical risks: Razorpay Sprint 2026 ML proximity, UPI AutoPay mandate date inflexibility, DPDPA compliance gap.",
-  "next_expected": "Mind A answers: eNACH vs UPI AutoPay wedge choice, SOC2/DPDPA minimum viable compliance path, and drafts cold outreach script for InsurTech CTO.",
+  "turn_number": 5,
+  "last_action": "Mind A answered all 3 questions: eNACH first (1.9B txn/year, batch model = perfect prediction window, 50-60% of insurance collections), ISO 27001 over SOC2 (RBI references ISO, ~₹5L, pilot-ready in 2 weeks at zero cost), drafted cold outreach email targeting Atul Mangla (Digit) and Naveen Macharla (Acko). Raised timing risk: Razorpay Sprint 2026 ML infra may shrink window to 6-9 months.",
+  "next_expected": "Mind B delivers: week-by-week 4-week sprint plan (Akshay + Harish parallel tracks), retroactive pilot data schema (exact CSV columns, anonymization, minimum rows), and go/no-go criteria for the pilot.",
   "user_action_needed": false,
-  "project_progress": "22%"
+  "project_progress": "28%"
 }

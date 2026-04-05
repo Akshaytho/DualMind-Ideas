@@ -62,6 +62,15 @@
 - Razorpay Sprint 2026 has cash position prediction for payouts — ML infra exists, could pivot to recurring. 12-18 month window estimate may be optimistic.
 - UPI AutoPay business decline rate: 74% average across top 50 banks (worse than previously noted 55-90% outlier)
 
+## Strategic Decisions (Turn 5)
+- **eNACH first, not UPI AutoPay.** eNACH = 1.9B txn/year, batch processing (natural prediction window), 50-60% of insurance premium collections. UPI AutoPay = real-time, fixed dates, smaller insurance share. eNACH batch model lets PayPulse intercept BEFORE file submission.
+- **ISO 27001 over SOC2 for India sales.** RBI outsourcing directions reference ISO-family. ~₹5L Year 1 via Sprinto. SOC2 is US-centric, more expensive.
+- **3-phase compliance:** Phase 0 (pilot-ready, 2 weeks, ₹0) → Phase 1 (DPDPA self-attested, +1 week) → Phase 2 (ISO 27001, 12-16 weeks, ₹5L). Pilot does NOT require ISO/SOC2.
+- **RBI Outsourcing Directions 2025 deadline passed (April 10, 2026).** NBFCs now actively scrutinizing vendors — compliance readiness is a differentiator.
+- **Cold outreach targets:** Atul Mangla (VP Eng, Digit), Naveen Macharla (CTO, Acko), Star Health (no public CTO — use IIA network). Retroactive pilot offer as core CTA.
+- **Timing risk upgraded:** Razorpay window may be 6-9 months, not 12-18. Speed > everything.
+- **India InsurTech Association (IIA)** — primary network for reaching insurance CTOs. Events: India Insurance Summit (Mumbai), ITC Asia 2026 (Singapore).
+
 ## Criteria Checklist
 - [ ] Nobody has built it (web search verified)
 - [ ] Creates monopoly/data moat
