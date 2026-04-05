@@ -1,0 +1,9 @@
+{
+  "current_turn": "MIND_A",
+  "phase": "PLANNING",
+  "turn_number": 0,
+  "last_action": "System initialized for idea generation. Both minds must search the web to verify novelty.",
+  "next_expected": "Mind A proposes 2-3 genuinely novel ideas with web search evidence they don't exist.",
+  "user_action_needed": false,
+  "project_progress": "0%"
+}

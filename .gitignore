@@ -1,0 +1,5 @@
+bridge/.secrets
+bridge/bridge.log
+bridge/.turns_log
+bridge/.last_hash
+.DS_Store
